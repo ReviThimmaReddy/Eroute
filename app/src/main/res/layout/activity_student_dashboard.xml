@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    tools:context=".StudentDashboardActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 1. Header Area -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="#020617"
+                android:paddingHorizontal="20dp">
+
+                <FrameLayout
+                    android:id="@+id/logoIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_pill_dark"
+                    android:backgroundTint="#0F172A"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_bus"
+                        android:contentDescription="@null"
+                        app:tint="@color/white" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/logoIcon"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/brand_name"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SMART STUDENT MOBILITY SYSTEM"
+                        android:textColor="#94A3B8"
+                        android:textSize="8sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.05" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/profileInitial"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/bg_pill_dark"
+                    android:backgroundTint="#1E293B"
+                    android:gravity="center"
+                    android:text="RE"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnLogout"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_button_dark"
+                    android:backgroundTint="#0F172A"
+                    android:paddingHorizontal="16dp"
+                    android:text="@string/logout"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 2. Gate Control Menu -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/menu_title"
+                    android:textColor="#64748B"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05" />
+
+                <!-- Menu Item -->
+                <LinearLayout
+                    android:id="@+id/menuDashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_pill_dark"
+                    android:backgroundTint="#0F172A"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="14dp"
+                    android:gravity="center_vertical">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_dashboard" app:tint="@color/white" android:alpha="0.7" android:contentDescription="@null" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:text="@string/menu_dashboard" android:textColor="@color/white" android:textSize="14sp" android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuApplyPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:padding="14dp"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_document" app:tint="#64748B" android:contentDescription="@null" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:text="@string/menu_apply_pass" android:textColor="#94A3B8" android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuDigitalPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:padding="14dp"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_qr_code" app:tint="#64748B" android:contentDescription="@null" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:text="@string/menu_digital_pass" android:textColor="#94A3B8" android:textSize="14sp" />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/menuNotifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:padding="14dp"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView android:id="@+id/ivNotif" android:layout_width="20dp" android:layout_height="20dp" android:src="@android:drawable/ic_popup_reminder" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:tint="#64748B" android:contentDescription="@null" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:text="@string/menu_notifications" android:textColor="#94A3B8" android:textSize="14sp" app:layout_constraintStart_toEndOf="@id/ivNotif" app:layout_constraintTop_toTopOf="parent" />
+                    <TextView android:layout_width="16dp" android:layout_height="16dp" android:background="@drawable/bg_pill_dark" android:backgroundTint="#991B1B" android:gravity="center" android:text="2" android:textColor="@color/white" android:textSize="9sp" android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:padding="14dp"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@android:drawable/ic_menu_myplaces" app:tint="#64748B" android:contentDescription="@null" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:text="@string/menu_profile" android:textColor="#94A3B8" android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/menuInspector"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:padding="14dp"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_database" app:tint="#F59E0B" android:contentDescription="@null" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:text="@string/menu_inspector" android:textColor="#94A3B8" android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- System Guard Card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/bg_role_card"
+                    android:backgroundTint="#0F172A"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/system_guard_title" android:textColor="#64748B" android:textSize="9sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center_vertical">
+                        <View android:layout_width="8dp" android:layout_height="8dp" android:background="@drawable/bg_pill_dark" android:backgroundTint="@color/accent_green" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="AES-256 Pass Ledger" android:textColor="@color/accent_green" android:textSize="12sp" android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btnGetPhpCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/bg_button_dark"
+                        android:backgroundTint="#1E293B"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_database" app:tint="@color/white" android:contentDescription="@null" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="@string/btn_get_php_code" android:textColor="@color/white" android:textSize="11sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginHorizontal="20dp" android:background="#1E293B" />
+
+            <!-- 3. STUDENT Hub Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/student_hub"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/platform_metrics"
+                    android:textColor="#64748B"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_pill_dark"
+                        android:backgroundTint="#0F172A"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="12dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@android:drawable/ic_menu_recent_history" app:tint="#3B82F6" android:contentDescription="@null" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="UTC Time: 02:30:07 PM"
+                            android:textColor="#94A3B8"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/btnSync"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="12dp"
+                        android:background="@drawable/bg_pill_dark"
+                        android:backgroundTint="#0F172A"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:paddingHorizontal="16dp">
+                        <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@android:drawable/stat_notify_sync" app:tint="#94A3B8" android:contentDescription="@null" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/btn_sync"
+                            android:textColor="#94A3B8"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Metrics Grid -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:columnCount="2"
+                    android:rowCount="2">
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_role_card" android:backgroundTint="#0F172A" android:orientation="vertical" android:padding="20dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/metric_active_students" android:textColor="#64748B" android:textSize="10sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="1" android:textColor="@color/white" android:textSize="28sp" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_role_card" android:backgroundTint="#0F172A" android:orientation="vertical" android:padding="20dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/metric_applied_req" android:textColor="#64748B" android:textSize="10sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="1" android:textColor="@color/white" android:textSize="28sp" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_role_card" android:backgroundTint="#0F172A" android:orientation="vertical" android:padding="20dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/metric_awaiting" android:textColor="#64748B" android:textSize="10sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="0 pending" android:textColor="#F59E0B" android:textSize="24sp" android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_margin="6dp" android:background="@drawable/bg_role_card" android:backgroundTint="#0F172A" android:orientation="vertical" android:padding="20dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/metric_issued" android:textColor="#64748B" android:textSize="10sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="1 active" android:textColor="#10B981" android:textSize="24sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </GridLayout>
+            </LinearLayout>
+
+            <!-- 4. Verification Workflow Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_role_card"
+                android:backgroundTint="#0F172A"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/workflow_title"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Status Log Phase -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_role_card"
+                    android:backgroundTint="#1E293B"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+                    <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_sync_orange" app:tint="#F59E0B" android:contentDescription="@null" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="14dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LOGGED PHASE" android:textColor="#D946EF" android:textSize="10sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status: Verified by College! Pending Fee Payment." android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Step Indicator -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView android:layout_width="28dp" android:layout_height="28dp" android:background="@drawable/bg_pill_dark" android:backgroundTint="#059669" android:padding="7dp" android:src="@drawable/ic_check" app:tint="@color/white" android:contentDescription="@null" />
+                    <View android:layout_width="40dp" android:layout_height="1dp" android:background="#1E293B" />
+                    <ImageView android:layout_width="28dp" android:layout_height="28dp" android:background="@drawable/bg_pill_dark" android:backgroundTint="#059669" android:padding="7dp" android:src="@drawable/ic_check" app:tint="@color/white" android:contentDescription="@null" />
+                    <View android:layout_width="40dp" android:layout_height="1dp" android:background="#1E293B" />
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:background="@drawable/bg_pill_dark" android:backgroundTint="#1E293B" android:gravity="center" android:text="3" android:textColor="#94A3B8" android:textSize="11sp" android:textStyle="bold" />
+                    <View android:layout_width="40dp" android:layout_height="1dp" android:background="#1E293B" />
+                    <TextView android:layout_width="28dp" android:layout_height="28dp" android:background="@drawable/bg_pill_dark" android:backgroundTint="#1E293B" android:gravity="center" android:text="4" android:textColor="#94A3B8" android:textSize="11sp" android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Payment Requisite Card -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/bg_role_card"
+                    android:backgroundTint="#111827"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical">
+                        <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_database" app:tint="#8B5CF6" android:contentDescription="@null" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:text="@string/payment_title" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+                    </LinearLayout>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/payment_desc" android:textColor="#64748B" android:textSize="11sp" />
+
+                    <!-- Tabs -->
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:orientation="horizontal">
+                        <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:background="@drawable/bg_pill_dark" android:backgroundTint="#0F172A" android:gravity="center" android:text="UPI Interface" android:textColor="@color/white" android:textSize="12sp" android:textStyle="bold" />
+                        <TextView android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_marginStart="12dp" android:background="@drawable/bg_pill_dark" android:backgroundTint="#1E293B" android:gravity="center" android:text="Debit/Credit Card" android:textColor="#94A3B8" android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Standard Fare Amount" android:textColor="#64748B" android:textSize="10sp" />
+                    <EditText android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="6dp" android:background="@drawable/bg_input_field" android:editable="false" android:focusable="false" android:paddingHorizontal="16dp" android:text="₹1,200.00 (Standard semester fee)" android:textColor="@color/white" android:textSize="13sp" />
+
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Enter UPI VPA ID" android:textColor="#64748B" android:textSize="10sp" />
+                    <EditText android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="6dp" android:background="@drawable/bg_input_field" android:paddingHorizontal="16dp" android:textColor="@color/white" android:textSize="13sp" />
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="24dp" android:background="@drawable/bg_button_dark" android:backgroundTint="@color/white" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pay Online &amp; Submit to Transport Officer" android:textColor="@color/bg_dark" android:textSize="13sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 5. Active System Ledger Log -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_role_card"
+                android:backgroundTint="#0F172A"
+                android:orientation="vertical"
+                android:padding="24dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ledger_log" android:textColor="@color/white" android:textSize="16sp" android:textStyle="bold" android:letterSpacing="0.05" />
+
+                <!-- Log Item -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="64dp" android:layout_height="24dp" android:background="@drawable/bg_pill_dark" android:backgroundTint="#064E3B" android:gravity="center" android:text="UTILITY" android:textColor="#34D399" android:textSize="10sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Database server integration ready" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="All student records are secured under AES tables." android:textColor="#94A3B8" android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:gravity="center_vertical">
+                    <TextView android:layout_width="64dp" android:layout_height="24dp" android:background="@drawable/bg_pill_dark" android:backgroundTint="#1E3A8A" android:gravity="center" android:text="INFO" android:textColor="#60A5FA" android:textSize="10sp" android:textStyle="bold" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="College academic admin Sarah is active" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="First-tier check is fully synchronized instantly." android:textColor="#94A3B8" android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 6. Profile Info Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/bg_role_card"
+                android:backgroundTint="#0F172A"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="32dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_student"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedShape" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/user_name" android:textColor="@color/white" android:textSize="20sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="REG2026001" android:textColor="#64748B" android:textSize="11sp" />
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginVertical="24dp" android:background="#1E293B" />
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="College:" android:textColor="#64748B" android:textSize="13sp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:gravity="end" android:text="Saveetha School of Engineering" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Dept:" android:textColor="#64748B" android:textSize="13sp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:gravity="end" android:text="Computer Science" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Allocated Route:" android:textColor="#64748B" android:textSize="13sp" />
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:gravity="end" android:text="Route 101" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar (Mockup) -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#020617"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_today" app:tint="@color/white" android:contentDescription="@null" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home" android:textColor="@color/white" android:textSize="10sp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_gallery" app:tint="#64748B" android:contentDescription="@null" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Games" android:textColor="#64748B" android:textSize="10sp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <TextView android:layout_width="20dp" android:layout_height="20dp" android:background="@drawable/bg_pill_dark" android:backgroundTint="#1E293B" android:gravity="center" android:text="1" android:textColor="#94A3B8" android:textSize="10sp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Tabs" android:textColor="#64748B" android:textSize="10sp" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@android:drawable/ic_menu_save" app:tint="#64748B" android:contentDescription="@null" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Files" android:textColor="#64748B" android:textSize="10sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

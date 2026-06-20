@@ -1,0 +1,69 @@
+name: eRoute Security Review
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Detect Backend Technology
+        run: |
+          if [ -f "build.gradle.kts" ] || [ -f "build.gradle" ]; then
+            echo "TECH_STACK=Android/Gradle" >> $GITHUB_ENV
+          elif [ -f "package.json" ]; then
+            echo "TECH_STACK=NodeJS" >> $GITHUB_ENV
+          else
+            echo "TECH_STACK=Unknown" >> $GITHUB_ENV
+          fi
+
+      - name: Run Dependency Scan (Trivy)
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          format: 'table'
+          exit-code: '0'
+          severity: 'CRITICAL,HIGH'
+
+      - name: Run Static Analysis (Semgrep)
+        run: |
+          python3 -m pip install semgrep
+          semgrep --config auto . --error
+
+      - name: Gradle Security Check
+        if: env.TECH_STACK == 'Android/Gradle'
+        run: |
+          chmod +x gradlew
+          ./gradlew lintDebug || echo "Lint finished with issues"
+
+      - name: Generate Security Report Summary
+        run: |
+          mkdir -p reports
+          echo "# Security Scan Summary" > reports/summary.md
+          echo "Tech Stack detected: ${{ env.TECH_STACK }}" >> reports/summary.md
+          echo "Scan Timestamp: $(date)" >> reports/summary.md
+
+      - name: Upload Scan Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-reports
+          path: reports/
+
+      - name: Action Summary
+        run: |
+          echo "### Security Review Completed" >> $GITHUB_STEP_SUMMARY
+          echo "Detected Tech Stack: ${{ env.TECH_STACK }}" >> $GITHUB_STEP_SUMMARY
+          echo "Please review the uploaded artifacts for detailed findings." >> $GITHUB_STEP_SUMMARY

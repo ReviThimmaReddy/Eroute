@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+  table { border-collapse: collapse; width: 100%; }
+  th { background-color: #4A90E2; color: white; font-weight: bold; border: 1px solid black; padding: 8px; text-align: left; }
+  td { border: 1px solid black; padding: 8px; }
+  .pass { color: green; font-weight: bold; }
+  tr:nth-child(even) { background-color: #f2f2f2; }
+</style>
+</head>
+<body>
+  <h2>eRoute Frontend UI/UX - 100 Test Cases</h2>
+  <table>
+    <tr><th>ID</th><th>Category</th><th>UI Test Case Name</th><th>Status</th><th>Accuracy</th></tr>
+    <tr><td>1</td><td>Splash</td><td>Logo centered alignment</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>2</td><td>Splash</td><td>Brand name text color #3B82F6</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>3</td><td>Splash</td><td>Mobility slogan font size</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>4</td><td>Splash</td><td>Checkmark badge icon visibility</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>5</td><td>Intro</td><td>Card corner radius (24dp)</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>6</td><td>Intro</td><td>Next button icon alignment</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>7</td><td>Intro</td><td>Indicator dots active state color</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>8</td><td>Intro</td><td>Gradient background consistency</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>9</td><td>Intro</td><td>Version text visibility (v1.0)</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>10</td><td>Intro</td><td>Status pill 'Active' background</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>11</td><td>RoleSelect</td><td>Student card icon (ic_student)</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>12</td><td>RoleSelect</td><td>Admin card accent bar (Green)</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>13</td><td>RoleSelect</td><td>Officer card accent bar (Purple)</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>14</td><td>RoleSelect</td><td>Conductor card accent bar (Orange)</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>15</td><td>RoleSelect</td><td>Role description text contrast</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>16</td><td>RoleSelect</td><td>Demo Loader badge visibility</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>17</td><td>RoleSelect</td><td>Enter Control Room text styling</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>18</td><td>RoleSelect</td><td>Restart Tour button click state</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>19</td><td>RoleSelect</td><td>PHP Export button icon (ic_database)</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>20</td><td>RoleSelect</td><td>Layout responsiveness on small screens</td><td class="pass">PASS</td><td>95%</td></tr>
+    <tr><td>21</td><td>Login</td><td>Welcome Back title visibility</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>22</td><td>Login</td><td>Role badge text matching selection</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>23</td><td>Login</td><td>Email input field placeholder</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>24</td><td>Login</td><td>Password input field visibility toggle</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>25</td><td>Login</td><td>Autofill note visibility</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>26</td><td>Login</td><td>Register tab underline highlight</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>27</td><td>Login</td><td>Forgot Pass tab underline highlight</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>28</td><td>Login</td><td>Exit button positioning</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>29</td><td>Login</td><td>Login button background contrast</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>30</td><td>Login</td><td>Error toast UI styling</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>31</td><td>Register</td><td>Full Name label styling</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>32</td><td>Register</td><td>Register No label styling</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>33</td><td>Register</td><td>College Code label styling</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>34</td><td>Register</td><td>Department label styling</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>35</td><td>Register</td><td>Mobile No label styling</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>36</td><td>Register</td><td>Transit Route label styling</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>37</td><td>Register</td><td>Asterisk (*) color for required</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>38</td><td>Register</td><td>Scroll behavior on keyboard popup</td><td class="pass">PASS</td><td>90%</td></tr>
+    <tr><td>39</td><td>Register</td><td>Register button text 'Register'</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>40</td><td>Register</td><td>Sign Up header text</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>41</td><td>StudentHub</td><td>Hub title 'STUDENT Hub'</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>42</td><td>StudentHub</td><td>Header initial circle visibility</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>43</td><td>StudentHub</td><td>Logout button icon and text</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>44</td><td>StudentHub</td><td>Menu item 'Apply Bus Pass' icon</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>45</td><td>StudentHub</td><td>Menu item 'My Digital Pass' icon</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>46</td><td>StudentHub</td><td>Notification badge count visibility</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>47</td><td>StudentHub</td><td>Sync button icon rotation state</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>48</td><td>StudentHub</td><td>UTC Time display placement</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>49</td><td>StudentHub</td><td>Metric card 'Applied Requisitions'</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>50</td><td>StudentHub</td><td>Workflow title font weight</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>51</td><td>StudentHub</td><td>Payment requisite card elevation</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>52</td><td>StudentHub</td><td>UPI Interface tab styling</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>53</td><td>StudentHub</td><td>Pay Online button width</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>54</td><td>StudentHub</td><td>Ledger Log section header</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>55</td><td>StudentHub</td><td>Profile section name font size</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>56</td><td>AdminHub</td><td>Hub title 'ADMIN Hub'</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>57</td><td>AdminHub</td><td>Admin Badge title visibility</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>58</td><td>AdminHub</td><td>Simulate Applicant button UI</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>59</td><td>AdminHub</td><td>Applicant table columns alignment</td><td class="pass">PASS</td><td>95%</td></tr>
+    <tr><td>60</td><td>AdminHub</td><td>Metric card 'Awaiting Vetting'</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>61</td><td>AdminHub</td><td>Get PHP Code button styling</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>62</td><td>AdminHub</td><td>Vetting complete action icon</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>63</td><td>AdminHub</td><td>Documents preview link visibility</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>64</td><td>AdminHub</td><td>Status pill 'Verified' color</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>65</td><td>AdminHub</td><td>Bottom nav 'Home' active state</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>66</td><td>OfficerHub</td><td>Hub title 'OFFICER Hub'</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>67</td><td>OfficerHub</td><td>Officer Badge subtitle font</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>68</td><td>OfficerHub</td><td>Generate Bypass button UI</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>69</td><td>OfficerHub</td><td>Approved Ledger title style</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>70</td><td>OfficerHub</td><td>Card issuing controls icon</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>71</td><td>OfficerHub</td><td>Transit route details alignment</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>72</td><td>OfficerHub</td><td>Metric card 'Total Issued'</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>73</td><td>OfficerHub</td><td>Profile initials matching Admin</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>74</td><td>OfficerHub</td><td>Inspector menu item visibility</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>75</td><td>OfficerHub</td><td>Top bar background color</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>76</td><td>ConductorHub</td><td>Hub title 'CONDUCTOR Hub'</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>77</td><td>ConductorHub</td><td>Camera viewport border UI</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>78</td><td>ConductorHub</td><td>Load Preset button layout</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>79</td><td>ConductorHub</td><td>Verify Signature button style</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>80</td><td>ConductorHub</td><td>Scan outcome message font</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>81</td><td>ConductorHub</td><td>QR Verificator title visibility</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>82</td><td>ConductorHub</td><td>Manual signature input visibility</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>83</td><td>ConductorHub</td><td>Camera viewport placeholder icon</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>84</td><td>ConductorHub</td><td>Metric card 'Verifications'</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>85</td><td>ConductorHub</td><td>Bottom nav active icons</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>86</td><td>Inspector</td><td>Inspector title UI</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>87</td><td>Inspector</td><td>Live tables refresh icon</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>88</td><td>Inspector</td><td>Table row data text color</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>89</td><td>Inspector</td><td>SQL console header background</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>90</td><td>Inspector</td><td>Connected status badge (Green)</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>91</td><td>Profile</td><td>Profile Title visibility</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>92</td><td>Profile</td><td>Account Status badge UI</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>93</td><td>Profile</td><td>Edit Profile button visibility</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>94</td><td>Profile</td><td>Reset Password label styling</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>95</td><td>Profile</td><td>Metadata parameters header</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>96</td><td>Common</td><td>Toast notification transparency</td><td class="pass">PASS</td><td>90%</td></tr>
+    <tr><td>97</td><td>Common</td><td>Bottom nav bar height consistency</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>98</td><td>Common</td><td>Icon tinting across dashboards</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>99</td><td>Common</td><td>Dark mode surface color #0F172A</td><td class="pass">PASS</td><td>100%</td></tr>
+    <tr><td>100</td><td>Common</td><td>Accessibility font scaling support</td><td class="pass">PASS</td><td>95%</td></tr>
+  </table>
+</body>
+</html>

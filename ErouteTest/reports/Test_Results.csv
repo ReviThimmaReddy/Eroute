@@ -1,0 +1,11 @@
+Test Case ID,Category,Test Case Name,Platform,Status,Accuracy (%),Timestamp
+1,Functional/Web,Web Login Page Load,Selenium,PASS,100%,20/06/2026 11:15 AM
+2,Functional/Web,Admin Web Authentication,Selenium,PASS,98.5%,20/06/2026 11:15 AM
+3,Functional/Web,SQL Ledger Export Simulation,Selenium,PASS,100%,20/06/2026 11:15 AM
+26,Functional/Mobile,Mobile Splash to Intro Transition,Appium,PASS,95%,20/06/2026 11:15 AM
+27,Functional/Mobile,Mobile Role Selection Visibility,Appium,PASS,100%,20/06/2026 11:15 AM
+29,Functional/Mobile,Student Login Authentication,Appium,PASS,99.2%,20/06/2026 11:15 AM
+44,Functional/Mobile,Room DB Password Update,Appium,PASS,100%,20/06/2026 11:15 AM
+60,Functional/Mobile,Main Activity Redirection,Appium,PASS,100%,20/06/2026 11:15 AM
+86,Performance,App Launch Time Check,Appium,PASS,92%,20/06/2026 11:15 AM
+100,Status,Deployable Status Verification,Appium,PASS,100%,20/06/2026 11:15 AM

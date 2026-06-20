@@ -1,0 +1,311 @@
+<resources>
+    <string name="app_name">Eroute</string>
+    <string name="brand_name">eRoute</string>
+    <string name="slogan_mobility">INTELLIGENT STUDENT MOBILITY ECOSYSTEM</string>
+    <string name="slogan_details">Smart Travel. Safe Access.\nVerified Journeys.</string>
+    <string name="logo_description">eRoute Logo</string>
+
+    <string name="intro_version">eRoute-vent v1.0</string>
+    <string name="intro_status">digital transit Active</string>
+    <string name="intro_subtitle">SMART BUS PASS ARCHITECTURE</string>
+    <string name="intro_welcome">Welcome to eRoute</string>
+    <string name="intro_description">Modern Smart Student Transportation System. An elegant hybrid of public utility scaling with modern startup UI optimization.</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_back">Back</string>
+    <string name="intro_footer">A Comparative Analysis of Smart Bus Pass and Real-Time\nTransport Verification for Intelligent Mobility Systems.</string>
+
+    <!-- Intro 2 -->
+    <string name="intro2_subtitle">INSTANT TICKET HANDSHAKE</string>
+    <string name="intro2_title">QR Verification Workflow</string>
+    <string name="intro2_description">Real-Time Pass Validation and Verification. Say goodbye to laminated cards; show your encrypted visual pass to the driver in one scan.</string>
+    <string name="ticket_available">Ticket Available</string>
+    <string name="pass_id">ID: PASS_80827</string>
+    <string name="route_name">ROUTE: Metro Hub</string>
+
+    <!-- Intro 3 -->
+    <string name="intro3_subtitle">INTELLIGENT COMMUTER GUARDS</string>
+    <string name="intro3_title">AI Fraud Detection</string>
+    <string name="intro3_description">Smart Detection of Invalid Passes. Prevent screenshots, duplicate usage, and exploit sharing with dynamic QR validity clocks and automated warnings.</string>
+    <string name="anti_spoof_title">Active Anti-Spoof Tracking</string>
+    <string name="anti_spoof_desc">Automatic verification block if validation timestamp deviates >60s</string>
+
+    <!-- Intro 4 -->
+    <string name="intro4_subtitle">STATE-WIDE DATA LEDGER</string>
+    <string name="intro4_title">Secure &amp; Encrypted System</string>
+    <string name="intro4_description">End-to-End Secure Student Transport Platform. Student documents, identity tags, and travel logs are heavily enciphered under standard privacy frameworks.</string>
+    <string name="fips_title">FIPS-compliant verification key</string>
+    <string name="sha_badge">SHA-256 Validated</string>
+    <string name="btn_get_started">Get Started</string>
+
+    <!-- Login & Register -->
+    <string name="login_welcome">Welcome Back</string>
+    <string name="login_subtitle">Sign in to continue your journey</string>
+    <string name="hint_email">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="no_account">Don\'t have an account? </string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login_exit">Exit</string>
+    <string name="login_tab_signin">Sign In</string>
+    <string name="login_tab_register">Register Account</string>
+    <string name="login_tab_forgot">Forgot Pass</string>
+    <string name="label_email">EMAIL ADDRESS</string>
+    <string name="label_password">PASSWORD</string>
+    <string name="login_autofill_note">Interactive autofill: Initial Credentials already loaded</string>
+    <string name="btn_login_dashboard">Log in to Dashboard</string>
+    <string name="btn_register_account">Register Account</string>
+
+    <!-- Registration Fields -->
+    <string name="label_full_name">FULL STUDENT NAME *</string>
+    <string name="label_register_number">OFFICIAL REGISTER NUMBER *</string>
+    <string name="label_college_code">OFFICIAL COLLEGE CODE *</string>
+    <string name="label_department">DEPARTMENT</string>
+    <string name="label_mobile">MOBILE NO</string>
+    <string name="label_transit_route">TRANSIT ROUTE ALLOCATION</string>
+    <string name="label_email_required">EMAIL *</string>
+    <string name="label_password_required">PASSWORD *</string>
+    <string name="default_college">Saveetha School of Engineering</string>
+    <string name="default_dept">Computer Science</string>
+    <string name="default_route">Route 101 - Central Station to Campus</string>
+
+    <!-- Forgot Pass -->
+    <string name="forgot_pass_desc">Provide your registered eRoute email address. A recovery hash link compatible with local SQL schemas will be transmitted to reset safety logs.</string>
+    <string name="label_registered_email">REGISTERED EMAIL</string>
+    <string name="btn_dispatch_restore">Dispatch Restore Sequence</string>
+
+    <!-- Get Started & Role Selection -->
+    <string name="get_started_platform">eRoute Platform</string>
+    <string name="get_started_desc">A Comparative Analysis of Smart Bus Pass &amp; Real-Time\nTransport Verification for Intelligent Mobility Systems.</string>
+    <string name="btn_get_started_platform">Get Started Platform</string>
+    <string name="role_selection_subtitle">INTERACTIVE GATEWAYS</string>
+    <string name="role_selection_title">Select Access Role</string>
+    <string name="role_selection_desc">Select one of the calibrated actors below to authenticate. Preset credentials will be loaded automatically.</string>
+    <string name="role_student">Student</string>
+    <string name="role_student_desc">Apply for a pass, download active QR, and review alerts.</string>
+    <string name="role_admin">College Admin</string>
+    <string name="role_admin_desc">First tier vetting. Review applications, sign off documents.</string>
+    <string name="role_officer">Transport Officer</string>
+    <string name="role_officer_desc">Second tier verification. Issue passes and write active ledger keys.</string>
+    <string name="role_conductor">Bus Conductor</string>
+    <string name="role_conductor_desc">Commuter verification. Scanning device client tool.</string>
+    <string name="restart_tour">Restart Tour</string>
+    <string name="demo_loader">DEMO LOADER</string>
+    <string name="enter_control_room">Enter Control Room -></string>
+    <string name="btn_php_export">PHP Files &amp; SQL Export (XAMPP Setup)</string>
+
+    <!-- Gateways & Handshakes -->
+    <string name="gateway_student">STUDENT GATEWAY</string>
+    <string name="gateway_admin">ADMIN GATEWAY</string>
+    <string name="gateway_officer">OFFICER GATEWAY</string>
+    <string name="gateway_conductor">CONDUCTOR GATEWAY</string>
+    <string name="email_student">student@eroute.com</string>
+    <string name="email_admin">admin@eroute.com</string>
+    <string name="email_officer">officer@eroute.com</string>
+    <string name="email_conductor">conductor@eroute.com</string>
+    <string name="pass_default">password123</string>
+
+    <string name="security_handshake">Security Handshake</string>
+    <string name="security_handshake_desc">authenticated validation required for verification workflows.</string>
+    <string name="label_official_email">OFFICIAL EMAIL ADDRESS</string>
+    <string name="label_key_phrase">KEY PHRASE</string>
+    <string name="btn_authenticate_badge">Authenticate Badge</string>
+
+    <string name="admin_badge">COLLEGE ADMINISTRATOR</string>
+    <string name="admin_default_note">DEFAULT - admin123</string>
+    <string name="officer_badge">STATE TRANSPORT OFFICER</string>
+    <string name="officer_default_note">DEFAULT - officer123</string>
+    <string name="conductor_badge">TRANSPORT CONDUCTOR GATEWAY</string>
+    <string name="conductor_default_note">DEFAULT - conductor123</string>
+
+    <!-- Dashboard Common -->
+    <string name="logout">Log Out</string>
+    <string name="menu_title">GATE CONTROL MENU</string>
+    <string name="menu_dashboard">Interactive Dashboard</string>
+    <string name="menu_apply_pass">Apply Bus Pass</string>
+    <string name="menu_digital_pass">My Digital Pass</string>
+    <string name="menu_notifications">Real-Time Notifications</string>
+    <string name="menu_profile">Profile Screen</string>
+    <string name="menu_inspector">XAMPP Live DB Inspector</string>
+    <string name="platform_metrics">Platform metrics and quick access indicators.</string>
+    <string name="metric_active_students">TOTAL ACTIVE\nSTUDENTS</string>
+    <string name="metric_applied_req">APPLIED\nREQUISITIONS</string>
+    <string name="metric_awaiting">AWAITING VETTING</string>
+    <string name="metric_issued">TOTAL ISSUED\nDIGIPASSES</string>
+
+    <!-- Student Dashboard -->
+    <string name="student_hub">STUDENT Hub</string>
+    <string name="user_name">Revi Thimma Reddy Kc</string>
+    <string name="user_role">STUDENT HUB</string>
+    <string name="user_reg">REG2026001</string>
+    <string name="utc_time_label">🕒 UTC Time: 12:03:19 PM</string>
+    <string name="btn_sync">🔄 Sync</string>
+
+    <string name="system_guard_title">SYSTEM GUARD</string>
+    <string name="system_guard_status">AES-256 Pass Ledger</string>
+    <string name="btn_get_php_code">Get Local PHP Code</string>
+
+    <string name="workflow_title">Verification Workflow Status Tracker</string>
+    <string name="workflow_status">Status: Payment Transacted! Forwarded to Transport Officer.</string>
+
+    <string name="simulated_sql_title">SIMULATED SQL COMPLETE</string>
+    <string name="simulated_sql_desc">₹1200 Payment Saved on XAMPP MariaDB `applications` Ledger!</string>
+    <string name="simulated_sql_sub">Your pass application has been sent to the Transport Officer\'s dashboard for active pass generation. Please log in as Transport Officer to verify and print the smart card!</string>
+
+    <string name="ledger_utility_badge">UTILITY</string>
+    <string name="ledger_utility_title">Database server integration ready</string>
+    <string name="ledger_utility_sub">All student records are secured under AES tables.</string>
+
+    <string name="ledger_info_badge">INFO</string>
+    <string name="ledger_info_title">College academic admin Sarah is active</string>
+    <string name="ledger_info_sub">First-tier check is fully synchronized instantly.</string>
+
+    <string name="label_college">College:</string>
+    <string name="label_dept">Dept:</string>
+    <string name="label_allocated_route">Allocated Route:</string>
+    <string name="value_route">Route 101</string>
+
+    <string name="step_submitted">Submitted</string>
+    <string name="step_verified">College Verified</string>
+    <string name="step_fee">Fee Paid</string>
+    <string name="step_pass">Pass Issued</string>
+    <string name="payment_title">Standard Pass Fare Payment Requisite</string>
+    <string name="payment_desc">Your details were validated automatically. Proceed to pay the bus pass fare below.</string>
+    <string name="pay_online">Pay Online &amp; Submit to Transport Officer</string>
+    <string name="fee_amount">₹1,200.00 (Standard semester fee)</string>
+    <string name="hint_upi">Enter UPI VPA ID</string>
+    <string name="ledger_log">ACTIVE SYSTEM LEDGER LOG</string>
+    <string name="ledger_utility">Database server integration ready\nAll student records are secured under AES tables.</string>
+    <string name="ledger_admin">College academic admin Sarah is active\nFirst tier check is fully synchronized instantly.</string>
+
+    <!-- Admin Dashboard -->
+    <string name="admin_hub">ADMIN Hub</string>
+    <string name="admin_name">Prof. Sarah (Admin)</string>
+    <string name="admin_badge_title">ADMIN BADGE</string>
+    <string name="apps_received_title">Bus Pass Applications Received</string>
+    <string name="apps_received_desc">Verify documents and sign-off for state Transport Officer processing.</string>
+    <string name="btn_simulate_applicant">+ Simulator Applicant</string>
+    <string name="col_student">STUDENT</string>
+    <string name="col_reg_no">REGISTER\nNUMBER</string>
+    <string name="col_route">ROUTE\nINFO</string>
+    <string name="col_docs">DOCUMENTS\nPREVIEW</string>
+    <string name="col_status">STATUS</string>
+    <string name="col_actions">VERIFICATION\nFLOW ACTIONS</string>
+    <string name="sample_reg">REG2020001</string>
+    <string name="sample_route_full">Route 101 - Central\nStation to\nCampus\nboarding\nat Central\nStation Bus\nTerminal</string>
+    <string name="sample_docs">Photo  |  College\nID</string>
+    <string name="status_verified_caps">VERIFIED</string>
+    <string name="action_vetting_complete">Vetting\ncomplete</string>
+
+    <!-- Officer Dashboard -->
+    <string name="officer_hub">OFFICER Hub</string>
+    <string name="officer_name">Officer David (TO)</string>
+    <string name="officer_badge_title">OFFICER BADGE</string>
+    <string name="approved_ledger_title">Approved Applications Ledger</string>
+    <string name="approved_ledger_desc">Generate secure printable cryptopass credentials.</string>
+    <string name="col_verif_level">VERIFICATION\nLEVEL</string>
+    <string name="col_route_details">TRANSIT\nROUTE\nDETAILS</string>
+    <string name="col_card_controls">CARD ISSUING\nCONTROLS</string>
+    <string name="sample_verif_info">RS2020001\nSaveetha\nSchool of\nEngineering</string>
+    <string name="sample_route_short">Route 101 -\nCentral\nStation to\nCampus</string>
+    <string name="status_verified_unpaid">VERIFIED (UNPAID)</string>
+    <string name="btn_generate_bypass">Generate\n(Unpaid\nBypass)</string>
+
+    <!-- Conductor Dashboard -->
+    <string name="conductor_hub">CONDUCTOR Hub</string>
+    <string name="conductor_name">Conductor Thomas</string>
+    <string name="conductor_badge_title">CONDUCTOR BADGE</string>
+    <string name="qr_verificator_title">QR Code Verificator</string>
+    <string name="qr_verificator_desc">Emulates real-world scanning on student\ndevice terminals.</string>
+    <string name="camera_viewport">Digital Camera Viewport active</string>
+    <string name="camera_viewport_sub">Ensure ID-margin line up. Input\nsignature manually below.</string>
+    <string name="manual_signature">MANUAL SIGNATURE VERIFICATION</string>
+    <string name="btn_load_preset">Load Preset</string>
+    <string name="btn_verify_signature">Verify Signature -> </string>
+    <string name="scan_outcome_title">Verification Scan Outcome</string>
+    <string name="scan_outcome_desc">Awaiting QR validation scanner query...</string>
+
+    <!-- Digital Pass -->
+    <string name="digital_pass_title">My Digital Pass</string>
+    <string name="pass_active_status">ACTIVE PASS</string>
+    <string name="pass_expiry">EXPIRES: 31 DEC 2024</string>
+    <string name="btn_download_pass">Download PDF Pass</string>
+    <string name="scan_instruction">Show this QR to the conductor for instant validation.</string>
+
+    <!-- DB Inspector -->
+    <string name="db_inspector_title">XAMPP Live DB Inspector</string>
+    <string name="db_inspector_desc">Real-time auditing of the eRoute local SQL ledger.</string>
+    <string name="db_status_active">CONNECTED: XAMPP/MySQL Service Active</string>
+    <string name="table_name">TABLE: active_ledger_keys</string>
+    <string name="db_log_header">QUERY LOG: SELECT * FROM verification_keys</string>
+    <string name="db_log_entry">200 OK: Fetched 128 bit encrypted handshake key</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profile Screen</string>
+    <string name="profile_subtitle">Manage your account credentials and system identity.</string>
+    <string name="label_account_status">ACCOUNT STATUS</string>
+    <string name="status_verified_verified">VERIFIED &amp; ACTIVE</string>
+    <string name="label_assigned_role">ASSIGNED ROLE</string>
+    <string name="label_last_login">LAST LOGIN</string>
+    <string name="btn_edit_profile">Edit Profile Details</string>
+    <string name="btn_security_audit">Security Audit Log</string>
+    <string name="apply_card_title">Apply Smart Transit Card</string>
+    <string name="apply_card_subtitle">Filling from the current academic session</string>
+    <string name="apply_progress_title">Application File Currently In Progress</string>
+    <string name="apply_progress_desc">Verify state \'Verified\'. Your requisition dossier was routed back to administrative databases.</string>
+    <string name="digipass_title">Digipass Access Keycard</string>
+    <string name="digipass_subtitle">Encrypted QR code for physical bus terminal verification.</string>
+    <string name="no_digipass_title">No Valid Digipass Issued Yet</string>
+    <string name="no_digipass_desc">Your pass requisitions must undergo College Admins\' vetting first, followed by necessary verification signatures from State Transport Officers.</string>
+    <string name="notif_screen_title">Direct Dispatch Alerts</string>
+    <string name="notif_screen_subtitle">Control related workflow audit logs.</string>
+    <string name="notif_welcome_title">Welcome to eRoute!</string>
+    <string name="notif_welcome_desc">Your smart commuting framework is ready. Apply for your bus pass using the menu.</string>
+    <string name="notif_welcome_date">10/11/2024</string>
+    <string name="notif_maintenance_title">Maintenance Window</string>
+    <string name="notif_maintenance_desc">Conductor verification systems will undergo a minor patch update tonight at 11 PM.</string>
+    <string name="notif_maintenance_date">12/11/2024</string>
+    <string name="account_mgmt_title">Account Management</string>
+    <string name="account_mgmt_subtitle">Personal credentials reset parameters.</string>
+    <string name="logged_id">System Logged ID: 1</string>
+    <string name="label_metadata">METADATA PARAMETERS</string>
+    <string name="label_auth_level">Authorized Level</string>
+    <string name="label_contact_base">Contact Base</string>
+    <string name="label_simulate_reset">SIMULATE RESET KEY CREDENTIALS</string>
+    <string name="label_new_pass">NEW SYSTEM PASSWORD *</string>
+    <string name="btn_reset_log">Reset Password Log</string>
+    <string name="db_inspector_live_title">XAMPP / MySQL Live Inspector</string>
+    <string name="db_inspector_live_subtitle">Verify real-time SQL data storage, row insertions, and backend schemas.</string>
+    <string name="db_server_simulator_title">XAMPP / MariaDB Server Simulator</string>
+    <string name="db_server_simulator_desc">Every submission or approval made in this UI is automatically stored in our active memory database, mirroring your local MySQL/phpMyAdmin setup.</string>
+    <string name="btn_refresh_tables">Refresh Live Tables</string>
+    <string name="tbl_users_label">tbl_users</string>
+    <string name="tbl_students_label">tbl_students</string>
+    <string name="tbl_applications_label">tbl_applications</string>
+    <string name="tbl_bus_passes_label">tbl_bus_passes</string>
+    <string name="tbl_routes_label">tbl_routes</string>
+    <string name="tbl_verifications_label">tbl_verifications</string>
+    <string name="rows_count_label">Rows</string>
+
+    <string name="tab_users">users (Accounts)</string>
+    <string name="tab_students">students (Directory)</string>
+    <string name="tab_applications">applications (Pass Requests)</string>
+    <string name="tab_bus_passes">bus_passes (Digipasses)</string>
+    <string name="tab_routes">routes (Pathways)</string>
+    <string name="tab_verifications">qr_verifications (Logs)</string>
+
+    <string name="col_photo">PHOTO</string>
+    <string name="col_id">ID</string>
+    <string name="col_student_name">STUDENT NAME</string>
+    <string name="col_reg_number">REGISTER NUMBER</string>
+    <string name="col_college_name">COLLEGE NAME</string>
+    <string name="col_route_simple">ROUTE</string>
+    <string name="col_mobile">MOBILE</string>
+
+    <string name="sql_console_title">SQL Ledger Console</string>
+    <string name="sql_php_file">PHP Controller File: get_applications.php</string>
+    <string name="sql_port">Port: 3306</string>
+    <string name="sql_statement_comment">// Simulated SQL Statement executing on MySQL inside XAMPP</string>
+    <string name="sql_query">SELECT * FROM `applications` ORDER BY `id` DESC;</string>
+    <string name="sql_response_info">Response Latency: 1.4ms | 1 Rows Returned</string>
+</resources>

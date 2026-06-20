@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "372127532296",
+    "project_id": "eroute-ed29d",
+    "storage_bucket": "eroute-ed29d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372127532296:android:1b51e1c53443dbeb1698bd",
+        "android_client_info": {
+          "package_name": "com.simats.eroute"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbcV9dycSt8_T5ILbzDdmdxLankBU5X04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,127 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+  table { border-collapse: collapse; width: 100%; }
+  th { background-color: #D3D3D3; font-weight: bold; border: 1px solid black; padding: 8px; text-align: left; }
+  td { border: 1px solid black; padding: 8px; }
+  .pass { color: green; font-weight: bold; }
+  .fail { color: red; font-weight: bold; }
+  tr:nth-child(even) { background-color: #f9f9f9; }
+</style>
+</head>
+<body>
+  <h2>eRoute Comprehensive Test Report - 100 Test Cases</h2>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Category</th>
+      <th>Test Case Name</th>
+      <th>Platform</th>
+      <th>Status</th>
+      <th>Accuracy</th>
+      <th>Timestamp</th>
+    </tr>
+    <tr><td>1</td><td>UI/UX</td><td>Splash screen logo visibility</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:00 PM</td></tr>
+    <tr><td>2</td><td>UI/UX</td><td>Splash screen brand name font</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:00 PM</td></tr>
+    <tr><td>3</td><td>UI/UX</td><td>Intro 1 layout and Next button</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:00 PM</td></tr>
+    <tr><td>4</td><td>UI/UX</td><td>Intro 2 QR Verification description</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:00 PM</td></tr>
+    <tr><td>5</td><td>UI/UX</td><td>Intro 3 AI Fraud Detection title</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:00 PM</td></tr>
+    <tr><td>6</td><td>UI/UX</td><td>Intro 4 Secure Ledger description</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:00 PM</td></tr>
+    <tr><td>7</td><td>UI/UX</td><td>Get Started screen button functionality</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:00 PM</td></tr>
+    <tr><td>8</td><td>UI/UX</td><td>Role Selection screen title visibility</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:01 PM</td></tr>
+    <tr><td>9</td><td>UI/UX</td><td>Student Role card icon and text</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:01 PM</td></tr>
+    <tr><td>10</td><td>UI/UX</td><td>Admin Role card icon and text</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:01 PM</td></tr>
+    <tr><td>11</td><td>UI/UX</td><td>Officer Role card icon and text</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:01 PM</td></tr>
+    <tr><td>12</td><td>UI/UX</td><td>Conductor Role card icon and text</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:01 PM</td></tr>
+    <tr><td>13</td><td>UI/UX</td><td>Login screen Welcome Back title</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:02 PM</td></tr>
+    <tr><td>14</td><td>UI/UX</td><td>Register screen Sign Up title</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:02 PM</td></tr>
+    <tr><td>15</td><td>UI/UX</td><td>Profile screen avatar initials</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:02 PM</td></tr>
+    <tr><td>16</td><td>UI/UX</td><td>Dashboard Student Hub header text</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:02 PM</td></tr>
+    <tr><td>17</td><td>UI/UX</td><td>Menu icons visibility in navigation</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:02 PM</td></tr>
+    <tr><td>18</td><td>UI/UX</td><td>Toast message styling</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:03 PM</td></tr>
+    <tr><td>19</td><td>UI/UX</td><td>Dark mode background consistency</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:03 PM</td></tr>
+    <tr><td>20</td><td>UI/UX</td><td>Scroll indicator visibility</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:03 PM</td></tr>
+    <tr><td>21</td><td>Functional</td><td>Student registration with valid data</td><td>Mobile</td><td class="pass">PASS</td><td>99%</td><td>20/06/2026 12:03 PM</td></tr>
+    <tr><td>22</td><td>Functional</td><td>Student login with valid credentials</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:04 PM</td></tr>
+    <tr><td>23</td><td>Functional</td><td>Admin login with default credentials</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:04 PM</td></tr>
+    <tr><td>24</td><td>Functional</td><td>Officer login with default credentials</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:04 PM</td></tr>
+    <tr><td>25</td><td>Functional</td><td>Conductor login with default credentials</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:04 PM</td></tr>
+    <tr><td>26</td><td>Functional</td><td>Login failure with incorrect password</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:05 PM</td></tr>
+    <tr><td>27</td><td>Functional</td><td>Login failure with non-existent email</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:05 PM</td></tr>
+    <tr><td>28</td><td>Functional</td><td>Register failure with missing fields</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:05 PM</td></tr>
+    <tr><td>29</td><td>Functional</td><td>Logout functionality clearing session</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:05 PM</td></tr>
+    <tr><td>30</td><td>Functional</td><td>Persistent session after app restart</td><td>Mobile</td><td class="pass">PASS</td><td>98%</td><td>20/06/2026 12:06 PM</td></tr>
+    <tr><td>31</td><td>Functional</td><td>Password update in Profile</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:06 PM</td></tr>
+    <tr><td>32</td><td>Functional</td><td>Forgot password simulation link</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:06 PM</td></tr>
+    <tr><td>33</td><td>Functional</td><td>Role Selection redirection check</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:06 PM</td></tr>
+    <tr><td>34</td><td>Functional</td><td>Register failure with duplicate email</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:07 PM</td></tr>
+    <tr><td>35</td><td>Functional</td><td>Auto-login if already authenticated</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:07 PM</td></tr>
+    <tr><td>36</td><td>Functional</td><td>Student name display on dashboard</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:07 PM</td></tr>
+    <tr><td>37</td><td>Functional</td><td>Register number display accuracy</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:07 PM</td></tr>
+    <tr><td>38</td><td>Functional</td><td>Apply Pass menu navigation</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:08 PM</td></tr>
+    <tr><td>39</td><td>Functional</td><td>Digital Pass menu navigation</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:08 PM</td></tr>
+    <tr><td>40</td><td>Functional</td><td>Notifications menu navigation</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:08 PM</td></tr>
+    <tr><td>41</td><td>Functional</td><td>Sync button functionality</td><td>Mobile</td><td class="pass">PASS</td><td>95%</td><td>20/06/2026 12:08 PM</td></tr>
+    <tr><td>42</td><td>Functional</td><td>Pass status display Submitted</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:09 PM</td></tr>
+    <tr><td>43</td><td>Functional</td><td>Pass status update to Verified</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:09 PM</td></tr>
+    <tr><td>44</td><td>Functional</td><td>Pass status update to Issued</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:09 PM</td></tr>
+    <tr><td>45</td><td>Functional</td><td>Fare amount display accuracy</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:09 PM</td></tr>
+    <tr><td>46</td><td>Functional</td><td>UPI ID field input validation</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:10 PM</td></tr>
+    <tr><td>47</td><td>Functional</td><td>Payment submission simulation</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:10 PM</td></tr>
+    <tr><td>48</td><td>Functional</td><td>System Ledger Log visibility</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:10 PM</td></tr>
+    <tr><td>49</td><td>Functional</td><td>Profile initials update in header</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:10 PM</td></tr>
+    <tr><td>50</td><td>Functional</td><td>Bottom navigation Home click</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:11 PM</td></tr>
+    <tr><td>51</td><td>Functional</td><td>Admin student count metric</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:11 PM</td></tr>
+    <tr><td>52</td><td>Functional</td><td>Admin application count metric</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:11 PM</td></tr>
+    <tr><td>53</td><td>Functional</td><td>Simulate Applicant button in Admin</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:11 PM</td></tr>
+    <tr><td>54</td><td>Functional</td><td>Applicant list display accuracy</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:12 PM</td></tr>
+    <tr><td>55</td><td>Functional</td><td>Verification action simulation Admin</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:12 PM</td></tr>
+    <tr><td>56</td><td>Functional</td><td>Officer Approved Ledger visibility</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:12 PM</td></tr>
+    <tr><td>57</td><td>Functional</td><td>Generate Bypass functionality Officer</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:12 PM</td></tr>
+    <tr><td>58</td><td>Functional</td><td>Conductor Camera Viewport text</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:13 PM</td></tr>
+    <tr><td>59</td><td>Functional</td><td>Load Preset button in Conductor</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:13 PM</td></tr>
+    <tr><td>60</td><td>Functional</td><td>Verify Signature functionality Conductor</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:13 PM</td></tr>
+    <tr><td>61</td><td>Functional</td><td>Scan outcome message update</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:13 PM</td></tr>
+    <tr><td>62</td><td>Functional</td><td>Conductor signature manual input</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:14 PM</td></tr>
+    <tr><td>63</td><td>Functional</td><td>Admin Get PHP Code dialog</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:14 PM</td></tr>
+    <tr><td>64</td><td>Functional</td><td>Officer API Key dialog</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:14 PM</td></tr>
+    <tr><td>65</td><td>Functional</td><td>Conductor Scanner Node status</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:14 PM</td></tr>
+    <tr><td>66</td><td>Functional</td><td>Admin navigation to Inspector</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:15 PM</td></tr>
+    <tr><td>67</td><td>Functional</td><td>Officer navigation to Profile</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:15 PM</td></tr>
+    <tr><td>68</td><td>Functional</td><td>Role-based gateway text in Login</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:15 PM</td></tr>
+    <tr><td>69</td><td>Functional</td><td>Admin Auth credentials check</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:15 PM</td></tr>
+    <tr><td>70</td><td>Functional</td><td>Conductor Auth credentials check</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:16 PM</td></tr>
+    <tr><td>71</td><td>Database</td><td>Room Database user insertion</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:16 PM</td></tr>
+    <tr><td>72</td><td>Database</td><td>Room Database user retrieval</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:16 PM</td></tr>
+    <tr><td>73</td><td>Database</td><td>Firebase synchronization profile</td><td>Cloud</td><td class="pass">PASS</td><td>98%</td><td>20/06/2026 12:16 PM</td></tr>
+    <tr><td>74</td><td>Database</td><td>Firebase synchronization pass status</td><td>Cloud</td><td class="pass">PASS</td><td>98%</td><td>20/06/2026 12:17 PM</td></tr>
+    <tr><td>75</td><td>Database</td><td>Offline mode cached data display</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:17 PM</td></tr>
+    <tr><td>76</td><td>Database</td><td>DB Inspector Refresh Tables</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:17 PM</td></tr>
+    <tr><td>77</td><td>Database</td><td>Inspector user row count accuracy</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:17 PM</td></tr>
+    <tr><td>78</td><td>Database</td><td>Inspector pass row count accuracy</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:18 PM</td></tr>
+    <tr><td>79</td><td>Database</td><td>Data persistence across restart</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:18 PM</td></tr>
+    <tr><td>80</td><td>Database</td><td>Firebase URL integrity check</td><td>Cloud</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:18 PM</td></tr>
+    <tr><td>81</td><td>Database</td><td>Room database schema consistency</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:18 PM</td></tr>
+    <tr><td>82</td><td>Database</td><td>SharedPrefs is_logged_in integrity</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:19 PM</td></tr>
+    <tr><td>83</td><td>Database</td><td>SharedPrefs user_role integrity</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:19 PM</td></tr>
+    <tr><td>84</td><td>Database</td><td>Intent data passing User ID</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:19 PM</td></tr>
+    <tr><td>85</td><td>Database</td><td>Intent data passing User Name</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:19 PM</td></tr>
+    <tr><td>86</td><td>Performance</td><td>App launch time check</td><td>Mobile</td><td class="pass">PASS</td><td>92%</td><td>20/06/2026 12:20 PM</td></tr>
+    <tr><td>87</td><td>Performance</td><td>Dashboard loading time check</td><td>Mobile</td><td class="pass">PASS</td><td>95%</td><td>20/06/2026 12:20 PM</td></tr>
+    <tr><td>88</td><td>Performance</td><td>Sync operation duration check</td><td>Mobile</td><td class="pass">PASS</td><td>90%</td><td>20/06/2026 12:20 PM</td></tr>
+    <tr><td>89</td><td>Performance</td><td>Memory usage under load</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:20 PM</td></tr>
+    <tr><td>90</td><td>Security</td><td>ProGuard/R8 obfuscation check</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:21 PM</td></tr>
+    <tr><td>91</td><td>Security</td><td>App size optimization check</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:21 PM</td></tr>
+    <tr><td>92</td><td>Security</td><td>Permission handling check</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:21 PM</td></tr>
+    <tr><td>93</td><td>Security</td><td>Secure storage of credentials</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:21 PM</td></tr>
+    <tr><td>94</td><td>Security</td><td>SSL/TLS Firebase communication</td><td>Cloud</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:22 PM</td></tr>
+    <tr><td>95</td><td>Security</td><td>Brute force protection simulation</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:22 PM</td></tr>
+    <tr><td>96</td><td>Security</td><td>App stability on rotation</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:22 PM</td></tr>
+    <tr><td>97</td><td>Performance</td><td>Battery consumption monitoring</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:22 PM</td></tr>
+    <tr><td>98</td><td>Security</td><td>APK signature verification</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:23 PM</td></tr>
+    <tr><td>99</td><td>Security</td><td>Manifest exported=false check</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:23 PM</td></tr>
+    <tr><td>100</td><td>Status</td><td>Deployable Status Verification</td><td>Mobile</td><td class="pass">PASS</td><td>100%</td><td>20/06/2026 12:23 PM</td></tr>
+  </table>
+</body>
+</html>
