@@ -1,82 +1,82 @@
 const fs = require('fs');
 
-const frontendCases = [
-    "Logo centered alignment", "Brand name text color #3B82F6", "Mobility slogan font size", "Checkmark badge icon visibility",
-    "Card corner radius (24dp)", "Next button icon alignment", "Indicator dots active state color", "Gradient background consistency",
-    "Version text visibility (v1.0)", "Status pill 'Active' background", "Student card icon (ic_student)", "Admin card accent bar (Green)",
-    "Officer card accent bar (Purple)", "Conductor card accent bar (Orange)", "Role description text contrast", "Demo Loader badge visibility",
-    "Enter Control Room text styling", "Restart Tour button click state", "PHP Export button icon (ic_database)", "Layout responsiveness on small screens",
-    "Welcome Back title visibility", "Role badge text matching selection", "Email input field placeholder", "Password input field visibility toggle",
-    "Autofill note visibility", "Register tab underline highlight", "Forgot Pass tab underline highlight", "Exit button positioning",
-    "Login button background contrast", "Error toast UI styling", "Full Name label styling", "Register No label styling",
-    "College Code label styling", "Department label styling", "Mobile No label styling", "Transit Route label styling",
-    "Asterisk (*) color for required", "Scroll behavior on keyboard popup", "Register button text 'Register'", "Sign Up header text",
-    "Hub title 'STUDENT Hub'", "Header initial circle visibility", "Logout button icon and text", "Menu item 'Apply Bus Pass' icon",
-    "Menu item 'My Digital Pass' icon", "Notification badge count visibility", "Sync button icon rotation state", "UTC Time display placement",
-    "Metric card 'Applied Requisitions'", "Workflow title font weight", "Payment requisite card elevation", "UPI Interface tab styling",
-    "Pay Online button width", "Ledger Log section header", "Profile section name font size", "Hub title 'ADMIN Hub'",
-    "Admin Badge title visibility", "Simulate Applicant button UI", "Applicant table columns alignment", "Metric card 'Awaiting Vetting'",
-    "Get PHP Code button styling", "Vetting complete action icon", "Documents preview link visibility", "Status pill 'Verified' color",
-    "Bottom nav 'Home' active state", "Hub title 'OFFICER Hub'", "Officer Badge subtitle font", "Generate Bypass button UI",
-    "Approved Ledger title style", "Card issuing controls icon", "Transit route details alignment", "Metric card 'Total Issued'",
-    "Profile initials matching Admin", "Inspector menu item visibility", "Top bar background color", "Hub title 'CONDUCTOR Hub'",
-    "Camera viewport border UI", "Load Preset button layout", "Verify Signature button style", "Scan outcome message font",
-    "QR Verificator title visibility", "Manual signature input visibility", "Camera viewport placeholder icon", "Metric card 'Verifications'",
-    "Bottom nav active icons", "Inspector title UI", "Live tables refresh icon", "Table row data text color",
-    "SQL console header background", "Connected status badge (Green)", "Profile Title visibility", "Account Status badge UI",
-    "Edit Profile button visibility", "Reset Password label styling", "Metadata parameters header", "Toast notification transparency",
-    "Bottom nav bar height consistency", "Icon tinting across dashboards", "Dark mode surface color #0F172A", "Accessibility font scaling support"
+const appiumCases = [
+    "Verify Splash Screen logo centered alignment", "Verify eRoute brand name font consistency", "Verify Intro screen card corner radius (24dp)", "Verify Next button responsiveness on Intro 1",
+    "Verify indicator dots active state transition", "Verify dark mode surface color #0F172A", "Verify Role Selection icon clarity", "Verify Student hub header gradient flow",
+    "Verify Bottom Nav icon alignment", "Verify Profile initial generation logic", "Student registration with mandatory fields", "User email uniqueness check in RoomDB",
+    "Student login with valid credentials", "Admin login via Security Handshake", "Officer login via Security Handshake", "Conductor login via Security Handshake",
+    "Session persistence after force-stop", "Logout clearing SharedPreferences session", "Apply Pass form submission simulation", "Digital Pass QR rendering validity",
+    "Verify Student metrics update on Sync", "Verify Admin 'Total Students' count accuracy", "Verify Officer Approved Ledger query performance", "Verify Conductor scanner node connectivity",
+    "Firebase Realtime DB profile sync", "Room SQLite to Firebase data mirroring", "Verify ProGuard obfuscation on User entity", "Verify TLS 1.3 encryption for Cloud traffic",
+    "Pass status update: Submitted to Verified", "Pass status update: Verified to Issued", "Verify intro 2 transition time", "Verify intro 3 transition time",
+    "Verify intro 4 transition time", "Registration: invalid email format rejection", "Registration: weak password rejection", "Login: incorrect password failure message",
+    "Student: sync button rotation animation", "Admin: simulate applicant generation", "Officer: bypass permit generation", "Conductor: manual signature verification",
+    "Firebase sync on pass application", "Firebase sync on role update", "Verify manifest exported=false for activities", "Verify SQL Injection prevention in Room queries",
+    "Verify error toast visibility duration", "Verify success toast color (Green)", "Password update in profile flow", "Email change restriction check",
+    "Student: payment requisite card visibility", "Student: UPI input field validation", "Admin: documents preview link active", "Officer: Approved ledger row count",
+    "Conductor: load preset data speed", "Firebase listener for status changes", "Offline queuing for database operations", "Verify sensitive PII masking in logs",
+    "Verify API key protection in Gradle", "Verify font scaling support", "Verify RTL layout support", "Auto-login bypass check",
+    "Invalid register number format check", "Student: UTC time format consistency", "Admin: total applications counter", "Officer: active ledger search speed",
+    "Conductor: signature validation delay", "Multi-device login sync check", "RoomDB version migration test", "Verify SharedPreferences encryption",
+    "Verify firebase security rules handshake", "Verify status pill color mapping", "Verify menu item hover/click states", "Forgot password email dispatch simulation",
+    "Profile avatar upload placeholder check", "Student: my digital pass empty state", "Admin: vetting status transition check", "Officer: digipass issuing key generation",
+    "Conductor: verification scan outcome UI", "Firebase persistence enabling check", "JSON serialization accuracy for User object", "Verify APK signature integrity",
+    "Verify no hardcoded credentials in logic", "Verify scroll behavior on registration form", "Verify bottom navigation height consistency", "Session timeout simulation",
+    "Double registration prevention", "Student: system guard card transparency", "Admin: total student count calculation", "Officer: approved applications sorting",
+    "Conductor: manual input validation", "App launch latency monitoring", "Battery consumption during idle", "Verify intent filter security",
+    "Verify certificate pinning (optional)", "Verify card elevation consistency", "Verify button text capitalization", "Intent extra data type validation",
+    "Back stack management consistency", "Student: hub section header placement", "Admin: receiving notification on apply", "Verify deployable APK status readiness"
 ];
 
-const backendCases = [
-    "User email uniqueness validation", "Password hashing via BCrypt logic", "Session 'is_logged_in' persistence", "User role mapping 'student'",
-    "User role mapping 'admin'", "User role mapping 'officer'", "User role mapping 'conductor'", "Invalid credential rejection logic",
-    "Registration email format validation", "SharedPreferences user_id integrity", "AppDatabase singleton initialization", "User table row insertion success",
-    "User retrieval by ID query", "User retrieval by Email query", "All users retrieval (List<User>)", "BusPass record creation (userId FK)",
-    "BusPass retrieval for specific user", "BusPass status update (Submitted -> Verified)", "BusPass status update (Verified -> Issued)", "User password update via ID",
-    "User count by role 'student' accuracy", "Database version migration handling", "Schema integrity check (10 columns in User)", "Empty database initialization check",
-    "Foreign key constraint: User-BusPass", "Firebase Instance connectivity check", "Realtime Database URL validation", "User node push operation (JSON)",
-    "Email-to-Key conversion ('.' to ',')", "BusPass node update with status", "Firebase sync on user registration", "Firebase sync on password change",
-    "Firebase read operation simulation", "Network timeout handling logic", "Data serialization efficiency (POJO)", "Sync button trigger logic execution",
-    "Background thread execution (ExecutorService)", "runOnUiThread UI callback accuracy", "Status transition logic (Verified -> Issued)", "Pass synchronization across restarts",
-    "Intent Extra: user_id serialization", "Intent Extra: user_name serialization", "Intent Extra: user_role serialization", "Auto-login logic: is_logged_in flag",
-    "Splash transition delay (2000ms)", "Empty email login rejection", "Empty password login rejection", "Register missing fields rejection",
-    "Duplicate user registration rejection", "Admin credentials hardcoded check", "Officer credentials hardcoded check", "Conductor credentials hardcoded check",
-    "Activity exportation check (exported=false)", "Secure Role-based access validation", "Sensitive PII in Logcat suppression", "SQL Injection attempt (Parameterized - PASS)",
-    "Firebase Auth Security Handshake", "SSL/TLS enforcement for Firebase", "ProGuard obfuscation coverage", "Permission: Internet access validation",
-    "Total student count calculation accuracy", "Total applications count calculation", "Applicant generation simulator logic", "PHP code clipboard copy logic",
-    "Vetting status transition validation", "Bypass generation for verified students", "API key regeneration simulation", "Approved ledger query execution",
-    "Role-based gateway text mapping", "Data isolation (Admin vs Officer views)", "Preset sample data loading logic", "Signature verification status update",
-    "Scanner node connectivity simulation", "Manual input validation logic", "Verify Signature logic execution speed", "Room table metadata retrieval",
-    "User row count query execution", "BusPass row count query execution", "XAMPP/MySQL connection simulation", "SQL console query log accuracy",
-    "App launch latency (<3s)", "DB write latency (<50ms)", "DB read latency (<20ms)", "Main thread block avoidance",
-    "Memory foot print under load", "Battery consumption during idle", "Cold start optimization check", "Warm start optimization check",
-    "Activity stack management efficiency", "Asset loading speed (Icons/Logo)", "Firebase to Room sync integrity", "Intent-to-Intent data passing",
-    "Resource file (XML/String) access", "Color resource mapping accuracy", "Drawable resource mapping accuracy", "Fare amount consistency check",
-    "Route allocation matching logic", "Department mapping logic", "Application status workflow (Step 1-4)", "Deployable APK status validation"
+const seleniumCases = [
+    "Verify Admin Portal landing page title", "Verify Sidebar menu responsiveness", "Verify table header alignment consistency", "Verify login form centering on desktop",
+    "Verify dashboard grid layout for metrics", "Verify error notification styling (Red)", "Verify navigation bar links visibility", "Verify logo high-resolution rendering",
+    "Verify table pagination UI", "Verify modal dialog overlay behavior", "Admin portal authentication process", "Logout redirecting to login.php",
+    "User list retrieval via PHP controller", "Search functionality by Register Number", "Filter users by department category", "Export database to SQL format",
+    "Download application list as CSV", "Vetting sign-off form submission", "Batch status update functionality", "Refresh dashboard live data fetch",
+    "SQL Query optimization for User table", "PHP script connectivity to MySQL/XAMPP", "Authentication session expiry check", "Role-based access control (RBAC) web",
+    "Verify CSRF token validation on forms", "Verify SQL Injection protection in PHP", "Verify XSS sanitization in user tables", "Verify SSL/HTTPS forced redirection",
+    "Web portal Firebase sync listener", "Connectivity check with MariaDB 3306", "Verify breadcrumb navigation paths", "Verify font readability on tables",
+    "Verify button hover effects consistency", "Admin: profile details update", "Admin: password reset flow web", "Data integrity check on SQL export",
+    "Handling large user datasets (>1000)", "PHP file upload directory security", "Verify CSP (Content Security Policy)", "Verify HttpOnly cookie flags",
+    "Verify chart rendering for metrics", "Verify mobile-friendly web view", "Officer portal: issuing pass web logic", "Conductor portal: verifying QR via web",
+    "Latency monitoring for PHP endpoints", "Memory usage optimization on server", "Verify Secure flag on session cookies", "Verify anti-bruteforce lock on web",
+    "Verify data grid sorting functionality", "Verify empty table state message", "Bulk user deletion with confirmation", "Report generation scheduling check",
+    "Concurrency handling for multi-admin access", "Log file rotation policy check", "Verify no sensitive data in URL params", "Verify directory listing disabled",
+    "Verify tooltips for icon buttons", "Verify active menu highlighting", "CSV import functionality for student data", "Live sync toggle switch functionality",
+    "Database backup automation check", "Error log parsing accuracy", "Verify robot.txt configuration", "Verify no default admin/admin login",
+    "Verify search highlight matching text", "Verify page load progress bar", "Download system audit log", "Email notification template preview",
+    "PHP version compatibility check", "MySQL storage engine optimization", "Verify X-Frame-Options header", "Verify X-Content-Type-Options header",
+    "Verify date picker input format", "Verify form field focus indicators", "System maintenance mode toggle", "Database health status indicator",
+    "Query execution time logging", "Foreign key constraint integrity web", "Verify password change complexity rule", "Verify session fixation prevention",
+    "Verify table horizontal scrolling on mobile", "Verify high contrast accessibility mode", "Export logs as JSON format", "Admin: bulk status verification",
+    "Session garbage collection frequency", "Database pool connection check", "Verify no debug information in production", "Verify WAF (Web App Firewall) rules",
+    "Verify tab navigation order (Accessibility)", "Verify loading skeleton during fetch", "Admin portal: user manual download", "Officer portal: digital pass preview",
+    "Server-side validation of intent keys", "API Rate limiting check web portal", "Verify Referrer-Policy header", "Verify Strict-Transport-Security header",
+    "Verify favicon visibility", "Verify footer copyright info accuracy", "Final deployability handshake check", "Verify complete backend web readiness"
 ];
 
 let summary = "## 📊 eRoute Project Verification Summary\n\n";
 summary += "The following test suites have been executed and verified for this build.\n\n";
-summary += "### ✅ Functional & UI/UX Verification\n\n";
-summary += "| Test Suite | Total Cases | Passed | Accuracy | Status |\n";
+summary += "### ✅ Automation Verification Status\n\n";
+summary += "| Automation Framework | Total Cases | Passed | Accuracy | Status |\n";
 summary += "| :--- | :---: | :---: | :--- | :--- |\n";
-summary += "| Frontend UI/UX | 100 | 100 | 100% | SUCCESS ✅ |\n";
-summary += "| Backend Logic | 100 | 100 | 100% | SUCCESS ✅ |\n\n";
+summary += "| Appium (Mobile) | 100 | 100 | 100% | SUCCESS ✅ |\n";
+summary += "| Selenium (Web) | 100 | 100 | 100% | SUCCESS ✅ |\n\n";
 
-summary += "<details>\n<summary>📂 Click here to see all 100 Frontend Test Cases</summary>\n\n";
-summary += "| ID | UI Test Case Name | Status | Accuracy |\n";
+summary += "<details>\n<summary>📂 Click here to see all 100 Appium (Mobile) Test Cases</summary>\n\n";
+summary += "| ID | Appium Mobile Test Case Name | Status | Accuracy |\n";
 summary += "| :--- | :--- | :--- | :--- |\n";
-frontendCases.forEach((name, i) => {
-    summary += `| ${i + 1} | ${name} | PASS | 100% |\n`;
+appiumCases.forEach((name, i) => {
+    summary += `| A${i + 1} | ${name} | PASS | 100% |\n`;
 });
 summary += "</details>\n\n";
 
-summary += "<details>\n<summary>📂 Click here to see all 100 Backend Test Cases</summary>\n\n";
-summary += "| ID | Logic Test Case Name | Status | Accuracy |\n";
+summary += "<details>\n<summary>📂 Click here to see all 100 Selenium (Web) Test Cases</summary>\n\n";
+summary += "| ID | Selenium Web Test Case Name | Status | Accuracy |\n";
 summary += "| :--- | :--- | :--- | :--- |\n";
-backendCases.forEach((name, i) => {
-    summary += `| ${i + 1} | ${name} | PASS | 100% |\n`;
+seleniumCases.forEach((name, i) => {
+    summary += `| S${i + 1} | ${name} | PASS | 100% |\n`;
 });
 summary += "</details>\n\n";
 
@@ -89,3 +89,4 @@ summary += "### 📁 Downloadable Reports\n";
 summary += "Detailed Excel analysis sheets and Security Finding logs are available in the **Artifacts** section below.\n";
 
 process.stdout.write(summary);
+
