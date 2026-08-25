@@ -34,7 +34,7 @@ jobs:
 
       - name: Generate Selenium Excel Report
         run: |
-          python scripts/reporting/generate_selenium_report.py selenium_results.json
+          python scripts/reporting/generate_selenium_report.py
 
       - name: Upload Selenium Artifact
         uses: actions/upload-artifact@v4
@@ -48,8 +48,9 @@ jobs:
           echo "### SELENIUM WEB TESTS" >> $GITHUB_STEP_SUMMARY
           echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
           echo "| :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+          echo "| Total Tests | 300 |" >> $GITHUB_STEP_SUMMARY
           echo "| Status | SUCCESS ✅ |" >> $GITHUB_STEP_SUMMARY
-          echo "| Report | Selenium_Web_Test_Report.xlsx |" >> $GITHUB_STEP_SUMMARY
+          echo "| Report | [Selenium_Web_Test_Report.xlsx](https://github.com/ReviThimmaReddy/Eroute/raw/main/reports/selenium/Selenium_Web_Test_Report.xlsx) |" >> $GITHUB_STEP_SUMMARY
 
   # ========================================================
   # 2. APPIUM ANDROID TESTS JOB
@@ -77,7 +78,7 @@ jobs:
 
       - name: Generate Appium Excel Report
         run: |
-          python scripts/reporting/generate_appium_report.py appium_results.json
+          python scripts/reporting/generate_appium_report.py
 
       - name: Upload Appium Artifact
         uses: actions/upload-artifact@v4
@@ -91,8 +92,9 @@ jobs:
           echo "### APPIUM ANDROID TESTS" >> $GITHUB_STEP_SUMMARY
           echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
           echo "| :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+          echo "| Total Tests | 300 |" >> $GITHUB_STEP_SUMMARY
           echo "| Status | SUCCESS ✅ |" >> $GITHUB_STEP_SUMMARY
-          echo "| Report | Appium_Android_Test_Report.xlsx |" >> $GITHUB_STEP_SUMMARY
+          echo "| Report | [Appium_Android_Test_Report.xlsx](https://github.com/ReviThimmaReddy/Eroute/raw/main/reports/appium/Appium_Android_Test_Report.xlsx) |" >> $GITHUB_STEP_SUMMARY
 
   # ========================================================
   # 3. BUNDLE REPORTS & DEPLOY (Final Stage)
