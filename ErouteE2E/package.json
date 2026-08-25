@@ -9,10 +9,10 @@
     "test:mocha": "mocha tests/**/*.test.js --timeout 60000"
   },
   "dependencies": {
-    "chai": "^5.2.0",
+    "chai": "^5.3.3",
     "chromedriver": "^133.0.0",
     "exceljs": "^4.4.0",
-    "mocha": "^11.1.0",
+    "mocha": "^11.8.0",
     "selenium-webdriver": "^4.28.1"
   }
 }

@@ -20,6 +20,9 @@ async function runAppiumSuite() {
   return new Promise((resolve) => {
     mocha.run((failures) => {
       console.log(`\n✨ Mobile Appium Suite execution completed with ${failures} failures.`);
+      if (failures > 0) {
+        process.exitCode = 1;
+      }
       resolve(failures);
     });
   });
