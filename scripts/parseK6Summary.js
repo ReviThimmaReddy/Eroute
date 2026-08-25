@@ -99,4 +99,16 @@ function parseK6Summary(summaryPath = 'summary.json') {
   }
 }
 
-parseK6Summary(process.argv[2] || 'summary.json');
+async function run() {
+  const summaryFile = process.argv[2] || 'summary.json';
+  parseK6Summary(summaryFile);
+  try {
+    const { generateK6ExcelReport } = await import('./generateK6ExcelReport.js');
+    await generateK6ExcelReport(summaryFile, process.argv[3] || 'load-test-report.xlsx');
+  } catch (err) {
+    console.error('Error generating Excel report:', err);
+  }
+}
+
+run();
+

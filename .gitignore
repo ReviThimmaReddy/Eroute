@@ -25,4 +25,7 @@ dist-ssr
 
 # Load test output
 summary.json
+*.xlsx
+load-test-report.xlsx
+
 
