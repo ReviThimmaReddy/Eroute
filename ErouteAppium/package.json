@@ -1,0 +1,20 @@
+{
+  "name": "eroute-appium-mobile",
+  "version": "1.0.0",
+  "description": "Appium Mobile Automation Test Suite with Excel Analysis for Eroute Android App",
+  "main": "tests/12_e2e/mega_android_1100.test.js",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/runReportTest.js",
+    "test:wdio": "wdio run wdio.conf.js"
+  },
+  "dependencies": {
+    "@wdio/cli": "^9.10.0",
+    "@wdio/local-runner": "^9.10.0",
+    "@wdio/mocha-framework": "^9.10.0",
+    "@wdio/spec-reporter": "^9.10.0",
+    "appium": "^2.16.2",
+    "chai": "^5.2.0",
+    "exceljs": "^4.4.0"
+  }
+}

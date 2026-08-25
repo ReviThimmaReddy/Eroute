@@ -23,9 +23,13 @@ dist-ssr
 *.sln
 *.sw?
 
-# Load test output
+# Test output reports
 summary.json
 *.xlsx
 load-test-report.xlsx
+execution-report.html
+ErouteE2E/node_modules
+ErouteAppium/node_modules
+
 
 
