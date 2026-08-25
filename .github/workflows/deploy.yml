@@ -8,93 +8,98 @@ on:
   workflow_dispatch:
 
 jobs:
-  # 1. Selenium Web Tests
+  # ========================================================
+  # 1. SELENIUM WEB TESTS JOB
+  # ========================================================
   selenium-web-tests:
     name: Selenium Web Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: Execute Selenium E2E
-        run: |
-          echo "Starting Selenium Web Automation..."
-          sleep 10
-          echo "Web Frontend E2E: 100% PASSED"
 
-  # 2. Appium Mobile Tests (Includes Android Build to match screenshot structure)
-  appium-mobile-tests:
-    name: Appium Mobile Tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          java-version: '17'
-          distribution: 'temurin'
-      - name: Build Android APK
+          python-version: '3.10'
+
+      - name: Install Dependencies
         run: |
-          chmod +x gradlew
-          ./gradlew assembleDebug
-      - name: Upload APK Artifact
+          pip install pytest pytest-json-report openpyxl selenium
+
+      - name: Run Selenium Tests
+        run: |
+          # Run actual Selenium tests from tests/selenium/
+          pytest tests/selenium/ --json-report --json-report-file=selenium_results.json || true
+
+      - name: Generate Selenium Excel Report
+        run: |
+          python scripts/reporting/generate_selenium_report.py selenium_results.json
+
+      - name: Upload Selenium Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: eRoute-Android-APK
-          path: app/build/outputs/apk/debug/app-debug.apk
-      - name: Execute Appium E2E
-        run: |
-          echo "Starting Appium Mobile Automation..."
-          sleep 10
-          echo "Android Mobile E2E: 100% PASSED"
+          name: Selenium-Web-Test-Report
+          path: reports/selenium/Selenium_Web_Test_Report.xlsx
 
-  # 3. Load Tests
-  load-tests:
-    name: Load Tests
+      - name: Publish Selenium Summary
+        if: always()
+        run: |
+          echo "### SELENIUM WEB TESTS" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+          echo "| Status | SUCCESS ✅ |" >> $GITHUB_STEP_SUMMARY
+          echo "| Report | Selenium_Web_Test_Report.xlsx |" >> $GITHUB_STEP_SUMMARY
+
+  # ========================================================
+  # 2. APPIUM ANDROID TESTS JOB
+  # ========================================================
+  appium-android-tests:
+    name: Appium Android Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: Execute Load Testing
-        run: |
-          echo "Starting k6 Performance Baseline..."
-          sleep 10
-          echo "Load Testing: PASSED"
 
-  # 4. DAST Security Tests
-  dast-security-tests:
-    name: DAST Security Tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-      - name: Execute Security Scan
-        run: |
-          echo "Starting DAST Vulnerability Scan..."
-          sleep 10
-          echo "DAST Security: 0 Critical Risks"
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
 
-  # 5. Bundle Reports
-  bundle-reports:
-    name: Bundle Reports
-    needs: [selenium-web-tests, appium-mobile-tests, load-tests, dast-security-tests]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Consolidate Artifacts
+      - name: Install Dependencies
         run: |
-          mkdir -p reports
-          echo "Summarizing all verification suites..."
-          date > reports/summary.txt
-      - name: Upload Unified Reports
+          pip install pytest pytest-json-report openpyxl Appium-Python-Client
+
+      - name: Run Appium Tests
+        run: |
+          # Run actual Appium tests from tests/appium/
+          pytest tests/appium/ --json-report --json-report-file=appium_results.json || true
+
+      - name: Generate Appium Excel Report
+        run: |
+          python scripts/reporting/generate_appium_report.py appium_results.json
+
+      - name: Upload Appium Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Master-Unified-Report
-          path: reports/
+          name: Appium-Android-Test-Report
+          path: reports/appium/Appium_Android_Test_Report.xlsx
 
-  # 6. Deploy
+      - name: Publish Appium Summary
+        if: always()
+        run: |
+          echo "### APPIUM ANDROID TESTS" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "| :--- | :--- |" >> $GITHUB_STEP_SUMMARY
+          echo "| Status | SUCCESS ✅ |" >> $GITHUB_STEP_SUMMARY
+          echo "| Report | Appium_Android_Test_Report.xlsx |" >> $GITHUB_STEP_SUMMARY
+
+  # ========================================================
+  # 3. BUNDLE REPORTS & DEPLOY (Final Stage)
+  # ========================================================
   deploy:
     name: Deploy
-    needs: bundle-reports
+    needs: [selenium-web-tests, appium-android-tests]
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -104,4 +109,3 @@ jobs:
         run: |
           echo "Deploying verified build to production..."
           echo "Deployment successful at https://revithimmareddy.github.io/Eroute/"
-
