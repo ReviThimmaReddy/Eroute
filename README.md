@@ -1,34 +1,32 @@
-# eRoute: Intelligent Student Mobility Ecosystem
+# React + TypeScript + Vite
 
-eRoute is a modern, full-stack Android application designed to streamline student transportation through digital pass issuance, real-time verification, and centralized administrative control.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## 🚀 Features
+Currently, two official plugins are available:
 
-- **Multi-Role Gateways**: Dedicated dashboards for Students, College Admins, Transport Officers, and Bus Conductors.
-- **Digital Pass Lifecycle**: Complete workflow from application submission to QR-based issuance.
-- **Real-Time Synchronization**: Hybrid architecture using local Room SQLite for persistence and Firebase Realtime Database for cloud sync.
-- **Security Handshake**: Role-based authentication and secure ledger simulation.
-- **Modern Startup UI**: High-fidelity dark mode interface with immersive Edge-to-Edge layouts.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 📊 Project Verification & Reports
+## React Compiler
 
-This repository includes comprehensive validation reports ensuring 100% functional readiness:
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- **Frontend Test Suite**: [View Frontend Reports](./ErouteTest/reports/Frontend_Test_Results.xls) - 100/100 UI/UX Test Cases PASSED.
-- **Backend Test Suite**: [View Backend Reports](./ErouteTest/reports/Backend_Test_Results.xls) - 100/100 Logic & Database Test Cases PASSED.
-- **Security Audit**: [Executive Summary](./Vulnerability%20Test%20Results/Summary.md) & [Detailed Findings](./Vulnerability%20Test%20Results/Security_Audit_Findings.md) by Senior AppSec Engineer.
+## Expanding the Oxlint configuration
 
-## 🛠 Tech Stack
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-- **Platform**: Android (Native Java)
-- **Local Database**: Room Persistence Library
-- **Cloud Backend**: Firebase Realtime Database
-- **Automation**: GitHub Actions (DevSecOps Pipeline)
-- **UI Architecture**: XML with ConstraintLayout and Material Design 3
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
 
-## 🔒 Security Review
-
-The project has undergone a full SAST (Static Application Security Testing) and DAST (Dynamic Application Security Testing) review. Automated security scans are integrated into the GitHub Actions tab to ensure continuous code health.
-
----
-*Created for SAVETHA SCHOOL OF ENGINEERING (SSE) - Final Year Project Submission.*
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.

@@ -1,0 +1,131 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && getUserData().role == 'admin';
+    }
+    
+    function isDriver() {
+      return isAuthenticated() && getUserData().role == 'driver';
+    }
+    
+    function isConductor() {
+      return isAuthenticated() && getUserData().role == 'conductor';
+    }
+    
+    function isStudent() {
+      return isAuthenticated() && getUserData().role == 'student';
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Users Collection
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      // Users can only register/create their own document and non-admins cannot self-assign the admin role
+      allow create: if isAuthenticated() && request.auth.uid == userId && (request.resource.data.role != 'admin' || isAdmin());
+      // Users cannot change their own stored role
+      allow update: if (isOwner(userId) && request.resource.data.role == resource.data.role) || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // Buses Collection
+    match /buses/{busId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Routes Collection
+    match /routes/{routeId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Bus Stops Collection
+    match /busStops/{stopId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Bus Passes Collection
+    match /busPasses/{passId} {
+      allow read: if isAuthenticated() && (resource.data.userId == request.auth.uid || resource.data.studentUid == request.auth.uid || resource.data.studentId == request.auth.uid || isAdmin() || isConductor());
+      allow create: if isAuthenticated() && (request.resource.data.userId == request.auth.uid || request.resource.data.studentUid == request.auth.uid);
+      // Only Admins can approve/modify status. Students can update pending pass details without self-approving.
+      allow update: if isAdmin() || ((isOwner(resource.data.userId) || request.auth.uid == resource.data.studentUid) && (resource.data.status == 'Pending' || resource.data.status == 'PENDING') && (request.resource.data.status == 'Pending' || request.resource.data.status == 'PENDING'));
+      allow delete: if isAdmin();
+    }
+
+    // Real-time Vehicle Locations (Telemetry)
+    match /locations/{busId} {
+      allow read: if isAuthenticated();
+      allow write: if isDriver() || isAdmin();
+    }
+
+    // Trips Collection
+    match /trips/{tripId} {
+      allow read: if isAuthenticated();
+      allow write: if isDriver() || isConductor() || isAdmin();
+    }
+
+    // Attendance Logs
+    match /attendanceLogs/{logId} {
+      allow read: if isAuthenticated();
+      allow create: if isConductor() || isDriver() || isAdmin();
+      allow update, delete: if isAdmin();
+    }
+
+    // Notifications
+    match /notifications/{notificationId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Feedback
+    match /feedback/{feedbackId} {
+      allow read: if isAuthenticated();
+      allow create: if isStudent() || isAuthenticated();
+      allow update, delete: if isAdmin();
+    }
+
+    // SOS Emergency Alerts
+    match /sosAlerts/{sosId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // Audit Logs
+    match /auditLogs/{logId} {
+      allow read: if isAdmin();
+      allow create: if isAuthenticated();
+      allow update, delete: if false; // Immutable audit logs
+    }
+
+    // System Settings
+    match /systemSettings/{settingId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Bus Pass Pricing Configuration
+    match /passPricing/{pricingId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+  }
+}
+

@@ -1,0 +1,49 @@
+name: Baseline & API Load Testing
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  load-test:
+    name: Run k6 Load Tests & Summarize
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci || npm install
+
+      - name: Build Web Frontend
+        run: npm run build
+
+      - name: Start Vite Preview Server (Background)
+        run: |
+          npx vite preview --port 5173 --host 127.0.0.1 &
+          sleep 4
+          curl -I http://127.0.0.1:5173 || exit 1
+
+      - name: Setup k6 Load Testing Engine
+        uses: grafana/setup-k6-action@v1
+
+      - name: Run k6 Baseline Load Test (100 VUs / 1 min)
+        run: |
+          k6 run --summary-export=summary.json scripts/load-test.js
+        env:
+          TARGET_URL: 'http://127.0.0.1:5173'
+
+      - name: Parse & Publish Load Test Summary to GHA Step Summary
+        if: always()
+        run: |
+          node scripts/parseK6Summary.js summary.json
